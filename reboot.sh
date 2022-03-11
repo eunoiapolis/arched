@@ -30,8 +30,8 @@ paru -S \
 # woeusb-gui
 
 paru -S zramd
-doas vim /etc/default/zramd
-doas systemctl enable --now zramd.service
+sudo vim /etc/default/zramd
+sudo systemctl enable --now zramd.service
 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
