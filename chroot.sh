@@ -33,7 +33,7 @@ pacman -S \
 	alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack easyeffects \
 	acpi acpid xf86-input-libinput chrony tlp xf86-input-wacom \
 	feh dunst flameshot lxappearance neofetch \
-	vim emacs tmux \
+	alacritty vim emacs tmux \
 	bash-completion dialog \
 	i3-gaps xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
 	android-tools \
