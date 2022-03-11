@@ -34,7 +34,7 @@ pacman -S \
 	acpi acpid xf86-input-libinput chrony tlp xf86-input-wacom \
 #    nvidia nvidia-utils nvidia-settings nvidia-prime \
 #	 mesa xf86-video-intel \
-	flameshot feh reflector dunst lxappearance neofetch \
+	feh reflector dunst lxappearance neofetch \
 	vim emacs tmux \
 	bash-completion dialog \
 	i3-gaps xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
