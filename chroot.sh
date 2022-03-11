@@ -32,9 +32,7 @@ pacman -S \
 	bluez bluez-utils blueman\
 	alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack easyeffects \
 	acpi acpid xf86-input-libinput chrony tlp xf86-input-wacom \
-#    nvidia nvidia-utils nvidia-settings nvidia-prime \
-#	 mesa xf86-video-intel \
-	lxappearance neofetch \
+	feh dunst flameshot lxappearance neofetch \
 	vim emacs tmux \
 	bash-completion dialog \
 	i3-gaps xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
@@ -44,6 +42,9 @@ pacman -S \
 	ffmpeg imagemagick obs-studio vlc \
 	python python-pip \
 	ttf-ubuntu-font-family 
+	
+#    nvidia nvidia-utils nvidia-settings nvidia-prime \
+#	 mesa xf86-video-intel \
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
