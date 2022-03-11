@@ -25,7 +25,7 @@ paru -S \
 	timeshift-autosnap \
 	brave-bin spotify-dev cloudflare-warp-bin figma-linux notion-app-enhanced obsidian-appimage flameshot \
 	nerd-fonts-jetbrains-mono arc-icon-theme-full-git gtk-theme-arc-gruvbox-git noto-fonts-emoji \
-	picom-ibhagwan-git \
+	picom-ibhagwan-git feh dunst \
 	ipscan woeusb-gui
 
 paru -S zramd
