@@ -6,11 +6,11 @@ timedatectl set-ntp true
 
 lsblk | less
 echo "Create three partitions, first for boot, second for root, third for data"
-read -p "Enter disk to partition" disk_to_install
+read -p "Enter disk to partition: " disk_to_install
 gdisk /dev/${disk_to_install}
-boot_partition=$disk_to_install}1
-root_partition=$disk_to_install}2
-data_partition=$disk_to_install}3
+boot_partition=${disk_to_install}1
+root_partition=${disk_to_install}2
+data_partition=${disk_to_install}3
 
 cryptsetup luksFormat /dev/${root_partition}
 cryptsetup luksFormat /dev/${data_partition}

@@ -9,39 +9,41 @@ sed -i '177s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=us" >> /etc/vconsole.conf
-echo "metalarc" >> /etc/hostname
+read -p "Enter device's name: " device_name
+echo "${device_name}" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1 localhost" >> /etc/hosts
-echo "127.0.1.1 metalarc.localdomain metalarc" >> /etc/hosts
+echo "127.0.1.1 ${device_name}.localdomain ${device_name}" >> /etc/hosts
 
 passwd
-useradd -m al
-usermod -aG wheel,audio,video al
-passwd aman
+read -p "Enter new user's name: " user_name
+useradd -m ${user_name}
+usermod -aG wheel,audio,video ${user_name}
+passwd ${user_name}
 
 pacman -S \
 	grub grub-btrfs efibootmgr os-prober \
 	intel-ucode base-devel linux-headers \
 	smartmontools mtools dosfstools cryptsetup btrfs-progs ntfs-3g \
 	xdg-user-dirs xdg-utils \
-	git openssh rsync stow \
+	git openssh rsync stow syncthing wget \
 	htop wget firewalld cronie nmap \
 	networkmanager network-manager-applet wpa_supplicant \
-	bluez bluez-utils \
-	alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack \
-	acpi acpid xf86-input-libinput tlp xf86-input-wacom \
+	bluez bluez-utils blueman\
+	alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack easyeffects \
+	acpi acpid xf86-input-libinput chrony tlp xf86-input-wacom \
 #    nvidia nvidia-utils nvidia-settings nvidia-prime \
 #	 mesa xf86-video-intel \
-	flameshot feh reflector \
-	vim emacs \
-	zsh bash-completion dialog \
-	xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot \
+	flameshot feh reflector dunst lxappearance neofetch \
+	vim emacs tmux \
+	bash-completion dialog \
+	i3-gaps xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
 	android-tools \
-	atool p7zip unrar unzip \
-	firefox vlc inkscape krita virtualbox \
-	ffmpeg imagemagick \
+	atool p7zip unrar unzip ark \
+	discord firefox qbittorrent inkscape krita blender virtualbox okular \
+	ffmpeg imagemagick obs-studio vlc \
 	python python-pip \
-	ttf-ubuntu-font-family
+	ttf-ubuntu-font-family 
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -23,10 +23,10 @@ rm -rf ./paru-bin
 paru -S timeshift-bin
 paru -S \
 	timeshift-autosnap \
-	brave-bin \
-	nerd-fonts-jetbrains-mono \
+	brave-bin spotify-dev cloudflare-warp-bin figma-linux notion-app-enhanced obsidian-appimage \
+	nerd-fonts-jetbrains-mono arc-icon-theme-full-git gtk-theme-arc-gruvbox-git noto-fonts-emoji \
 	picom-ibhagwan-git \
-	ipscan
+	ipscan woeusb-gui
 
 paru -S zramd
 doas vim /etc/default/zramd
