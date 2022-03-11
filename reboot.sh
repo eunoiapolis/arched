@@ -36,7 +36,4 @@ sudo systemctl enable --now zramd.service
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo reflector --latest 30 --sort rate --save /etc/pacman.d/mirrorlist
-
 sudo pacman -Syy
