@@ -2,10 +2,10 @@
 ## Archlinux installation and configuration script.
 
 ### On live installation shell run:
-`wget -o - https://raw.githubusercontent.com/eunoiapolis/arched/main/live.sh | bash`
+`curl -L https://github.com/eunoiapolis/arched/archive/main.tar.gz --output arched && tar -xvf arched && rm arched && chmod +x ./arched-main/live.sh && ./arched-main/live.sh`
 
 ### After chrooting:
-`wget -o - https://raw.githubusercontent.com/eunoiapolis/arched/main/chroot.sh | bash`
+`cd ~ && git clone https://github.com/eunoiapolis/arched.git && chmod +x ./arched/chroot.sh && ./arched/chroot.sh`
 
 ### After rebooting:
-`wget -o - https://raw.githubusercontent.com/eunoiapolis/arched/main/reboot.sh | bash`
+`cd ~ && git clone https://github.com/eunoiapolis/arched.git && chmod +x ./arched/reboot.sh && ./arched/reboot.sh`
