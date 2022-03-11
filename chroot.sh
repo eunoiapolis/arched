@@ -35,7 +35,7 @@ pacman -S \
 	feh dunst flameshot lxappearance neofetch \
 	alacritty vim emacs tmux \
 	bash-completion dialog \
-	i3-gaps xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
+	i3-gaps dmenu xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
 	android-tools \
 	atool p7zip unrar unzip ark \
 	discord firefox qbittorrent inkscape krita blender virtualbox okular \
