@@ -54,7 +54,6 @@ systemctl enable \
 	bluetooth \
 	sshd \
 	tlp \
-	reflector.timer \
 	firewalld \
 	acpid
 
