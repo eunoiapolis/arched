@@ -23,7 +23,7 @@ rm -rf ./paru-bin
 paru -S timeshift-bin
 paru -S \
 	timeshift-autosnap \
-	brave-bin spotify-dev cloudflare-warp-bin figma-linux notion-app-enhanced obsidian-appimage \
+	brave-bin spotify cloudflare-warp-bin figma-linux notion-app-enhanced obsidian-appimage \
 	nerd-fonts-jetbrains-mono arc-icon-theme-full-git gtk-theme-arc-gruvbox-git noto-fonts-emoji \
 	picom-ibhagwan-git \
 	ipscan
