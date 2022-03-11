@@ -4,7 +4,7 @@ set -e
 
 timedatectl set-ntp true
 
-lsblk | less
+lsblk
 echo "Create three partitions, first for boot, second for root, third for data"
 read -p "Enter disk to partition: " disk_to_install
 gdisk /dev/${disk_to_install}
