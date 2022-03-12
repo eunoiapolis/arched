@@ -5,7 +5,7 @@ set -e
 cd ~
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 hwclock --systohc
-sed -i '178s/.//' /etc/locale.gen
+vim /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=us" >> /etc/vconsole.conf
@@ -35,13 +35,13 @@ pacman -S \
 	feh dunst flameshot lxappearance neofetch \
 	alacritty vim emacs tmux \
 	bash-completion dialog \
-	i3-gaps dmenu xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
+	i3-gaps i3status dmenu xorg xorg-xinit xorg-xrandr xorg-xbacklight xorg-xsetroot xfce4-power-manager wmctrl \
 	android-tools \
 	atool p7zip unrar unzip ark \
 	discord firefox qbittorrent inkscape krita blender virtualbox okular \
 	ffmpeg imagemagick obs-studio vlc \
 	python python-pip \
-	ttf-ubuntu-font-family 
+	ttf-ubuntu-font-family ttf-dejavu
 	
 #    nvidia nvidia-utils nvidia-settings nvidia-prime \
 #	 mesa xf86-video-intel \
